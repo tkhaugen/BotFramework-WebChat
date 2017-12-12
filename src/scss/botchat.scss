@@ -216,13 +216,13 @@
         height: 22px;
         position: absolute;
         stroke: none;
-        top: 12px;
-        width: 6px;
+        top: 0;
+        width: 16px;
     }
 
     .wc-message-content {
-        border-radius: 2px;
-        box-shadow: 0px 1px 1px 0px $c_shadow;
+        // border-radius: 2px;
+        // box-shadow: 0px 1px 1px 0px $c_shadow;
         padding: 8px;
         word-break: break-word;
       }
@@ -284,8 +284,8 @@
         }
 
         button:active {
-            background-color: $c_brand;
-            border-color: $c_brand;
+            background-color: $c_brand2;
+            border-color: $c_brand2;
             color: $c01;
         }
 
@@ -510,8 +510,9 @@
 /* from me */
 
     .wc-message-from-me {
+        clear: right;
         float: right;
-        margin-right: 6px;
+        margin-right: 20px;
     }
 
     .wc-message-from-me.wc-message-from {
@@ -532,14 +533,25 @@
     }
 
     .wc-message-from-me svg.wc-message-callout {
-        right: -6px;
+        right: -16px;
+    }
+
+    .wc-dot-from-me {
+        float: right;
+        margin-top: 2px;
+        margin-bottom: 4px;
+    }
+
+    .wc-dot-from-me circle {
+        fill: $c13;
     }
 
 /* from bot */
 
     .wc-message-from-bot {
+        clear: left;
         float: left;
-        margin-left: 8px;
+        margin-left: 20px;
     }
 
     .wc-message-from-bot .wc-message-content {
@@ -556,7 +568,17 @@
     }
 
     .wc-message-from-bot svg.wc-message-callout {
-        left: -6px;
+        left: -12px;
+    }
+
+    .wc-dot-from-bot {
+        float: left;
+        margin-top: 2px;
+        margin-bottom: 4px;
+    }
+
+    .wc-dot-from-bot circle {
+        fill: $c13;
     }
 
 /* console */

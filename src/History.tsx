@@ -282,11 +282,14 @@ export class WrappedActivity extends React.Component<WrappedActivityProps, {}> {
 
         return (
             <div data-activity-id={ this.props.activity.id } className={ wrapperClassName } onClick={ this.props.onClickActivity }>
+                <svg height="20" width="20" className={ `wc-dot-from-` + who }>
+                    <circle cx="10" cy="10" r="10" />
+                </svg>
                 <div className={ 'wc-message wc-message-from-' + who } ref={ div => this.messageDiv = div }>
                     <div className={ contentClassName }>
                         <svg className="wc-message-callout">
-                            <path className="point-left" d="m0,6 l6 6 v-12 z" />
-                            <path className="point-right" d="m6,6 l-6 6 v-12 z" />
+                            <path className="point-left" d="m0,0 l12 10 v-10 z" />
+                            <path className="point-right" d="m12 0 l-12 10 v-10 z" />
                         </svg>
                         { this.props.children }
                     </div>
